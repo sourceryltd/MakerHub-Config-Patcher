@@ -1,0 +1,342 @@
+{
+    "insecureDangerousGuestAccess": true,
+    "state": {
+        "checkForUpdates": true,
+        "prereleases": false,
+        "controller": {
+            "exception": {
+                "ignoreErrors": true
+            }
+        }
+    },
+    "secret": "$2a$10$Xf7eeu0IyfvKJvxRUZ3vGO",
+    "workspaces": [
+        {
+            "id": "maslow",
+            "path": "/maslow",
+            "machineProfileId": "makermade-maslow-m2",
+            "color": "#4078c0",
+            "bkColor": "#f6f7f8",
+            "icon": "cnc",
+            "name": "Maslow",
+            "onboarded": true,
+            "autoReconnect": false,
+            "preferImperial": false,
+            "firmware": {
+                "id": "maslow-due",
+                "name": "MaslowDue",
+                "requiredVersion": 20200905,
+                "suggestedVersion": 20200915,
+                "baudRate": 38400,
+                "rtscts": false,
+                "controllerType": "Maslow",
+                "downloadUrl": "https://github.com/makermadecnc/MaslowDue",
+                "helpUrl": "https://github.com/makermadecnc/MaslowDue",
+                "port": "COM3"
+            },
+            "axes": {
+                "x": {
+                    "min": -1219.2,
+                    "max": 1219.2,
+                    "precision": 0,
+                    "accuracy": 1,
+                    "id": "maslow-x-8ft",
+                    "name": "X"
+                },
+                "y": {
+                    "min": -609.6,
+                    "max": 609.6,
+                    "precision": 0,
+                    "accuracy": 1,
+                    "id": "maslow-y-4ft",
+                    "name": "Y"
+                },
+                "z": {
+                    "min": -25.4,
+                    "max": 12.7,
+                    "precision": 1,
+                    "accuracy": 0.1,
+                    "id": "maslowZ",
+                    "name": "Z"
+                }
+            },
+            "features": {
+                "homing": {
+                    "id": "maslow-homing",
+                    "key": "homing",
+                    "disabled": false,
+                    "title": "Reset Chains",
+                    "description": "Inform the Maslow that the chains (not the sled) are in the exact same position as they were when you used \"Set Chains\".",
+                    "icon": "fa-link"
+                },
+                "mpos_set_home_x": false,
+                "mpos_set_home_y": false,
+                "mpos_go_home_x": false,
+                "mpos_go_home_y": false,
+                "mpos_go_home_z": false
+            },
+            "commands": {
+                "homing": [
+                    "G21",
+                    "G90",
+                    "G0 Z5",
+                    "G0 X0 Y0"
+                ]
+            },
+            "parts": [
+                {
+                    "id": "arduino-due",
+                    "sortOrder": 2,
+                    "partType": "BOARD",
+                    "title": "Arduino Due",
+                    "description": null,
+                    "dataBlob": "",
+                    "settings": []
+                },
+                {
+                    "id": "makermade-v2",
+                    "sortOrder": 3,
+                    "partType": "SHIELD",
+                    "title": "V2",
+                    "description": "V2 shield (three heatsinks, used by the M2).",
+                    "dataBlob": "",
+                    "settings": [
+                        {
+                            "id": "makermade-invert-z"
+                        },
+                        {
+                            "id": "makermade-z-axis-resolution"
+                        }
+                    ]
+                },
+                {
+                    "id": "maslow-round-18-sled",
+                    "sortOrder": 1,
+                    "partType": "SLED",
+                    "title": "Standard 18-inch Circle",
+                    "description": "An 18-inch diameter sled, with the tip of the cutter 9 inches from each edge (most common).",
+                    "dataBlob": "{\"top\":228.6,\"right\":228.6,\"bottom\":228.6,\"left\":228.6}",
+                    "settings": []
+                }
+            ]
+        },
+        {
+            "id": "maslow2",
+            "path": "/maslow2",
+            "machineProfileId": "makermade-maslow-m2",
+            "color": "#4078c0",
+            "bkColor": "#f6f7f8",
+            "icon": "cnc",
+            "name": "Maslow2",
+            "onboarded": true,
+            "autoReconnect": false,
+            "preferImperial": false,
+            "firmware": {
+                "id": "maslow-due",
+                "name": "MaslowDue",
+                "requiredVersion": 20200905,
+                "suggestedVersion": 20200915,
+                "baudRate": 38400,
+                "rtscts": false,
+                "controllerType": "Maslow",
+                "downloadUrl": "https://github.com/makermadecnc/MaslowDue",
+                "helpUrl": "https://github.com/makermadecnc/MaslowDue",
+                "port": "COM3"
+            },
+            "axes": {
+                "x": {
+                    "min": -1219.2,
+                    "max": 1219.2,
+                    "precision": 0,
+                    "accuracy": 1,
+                    "id": "maslow-x-8ft",
+                    "name": "X"
+                },
+                "y": {
+                    "min": -609.6,
+                    "max": 609.6,
+                    "precision": 0,
+                    "accuracy": 1,
+                    "id": "maslow-y-4ft",
+                    "name": "Y"
+                },
+                "z": {
+                    "min": -25.4,
+                    "max": 12.7,
+                    "precision": 1,
+                    "accuracy": 0.1,
+                    "id": "maslowZ",
+                    "name": "Z"
+                }
+            },
+            "features": {
+                "homing": {
+                    "id": "maslow-homing",
+                    "key": "homing",
+                    "disabled": false,
+                    "title": "Reset Chains",
+                    "description": "Inform the Maslow that the chains (not the sled) are in the exact same position as they were when you used \"Set Chains\".",
+                    "icon": "fa-link"
+                },
+                "mpos_set_home_x": false,
+                "mpos_set_home_y": false,
+                "mpos_go_home_x": false,
+                "mpos_go_home_y": false,
+                "mpos_go_home_z": false
+            },
+            "commands": {
+                "homing": [
+                    "G21",
+                    "G90",
+                    "G0 Z5",
+                    "G0 X0 Y0"
+                ]
+            },
+            "parts": [
+                {
+                    "id": "arduino-due",
+                    "sortOrder": 2,
+                    "partType": "BOARD",
+                    "title": "Arduino Due",
+                    "description": null,
+                    "dataBlob": "",
+                    "settings": []
+                },
+                {
+                    "id": "makermade-v2",
+                    "sortOrder": 3,
+                    "partType": "SHIELD",
+                    "title": "V2",
+                    "description": "V2 shield (three heatsinks, used by the M2).",
+                    "dataBlob": "",
+                    "settings": [
+                        {
+                            "id": "makermade-invert-z"
+                        },
+                        {
+                            "id": "makermade-z-axis-resolution"
+                        }
+                    ]
+                },
+                {
+                    "id": "maslow-round-18-sled",
+                    "sortOrder": 1,
+                    "partType": "SLED",
+                    "title": "Standard 18-inch Circle",
+                    "description": "An 18-inch diameter sled, with the tip of the cutter 9 inches from each edge (most common).",
+                    "dataBlob": "{\"top\":228.6,\"right\":228.6,\"bottom\":228.6,\"left\":228.6}",
+                    "settings": []
+                }
+            ]
+        },
+        {
+            "id": "maslowzzz",
+            "path": "/maslowzzz",
+            "machineProfileId": "makermade-maslow-m2",
+            "color": "#4078c0",
+            "bkColor": "#f6f7f8",
+            "icon": "cnc",
+            "name": "Maslowzzz",
+            "onboarded": true,
+            "autoReconnect": false,
+            "preferImperial": false,
+            "firmware": {
+                "id": "maslow-due",
+                "name": "MaslowDue",
+                "requiredVersion": 20200905,
+                "suggestedVersion": 20200915,
+                "baudRate": 38400,
+                "rtscts": false,
+                "controllerType": "Maslow",
+                "downloadUrl": "https://github.com/makermadecnc/MaslowDue",
+                "helpUrl": "https://github.com/makermadecnc/MaslowDue",
+                "port": "COM3"
+            },
+            "axes": {
+                "x": {
+                    "min": -1219.2,
+                    "max": 1219.2,
+                    "precision": 0,
+                    "accuracy": 1,
+                    "id": "maslow-x-8ft",
+                    "name": "X"
+                },
+                "y": {
+                    "min": -609.6,
+                    "max": 609.6,
+                    "precision": 0,
+                    "accuracy": 1,
+                    "id": "maslow-y-4ft",
+                    "name": "Y"
+                },
+                "z": {
+                    "min": -25.4,
+                    "max": 12.7,
+                    "precision": 1,
+                    "accuracy": 0.1,
+                    "id": "maslowZ",
+                    "name": "Z"
+                }
+            },
+            "features": {
+                "homing": {
+                    "id": "maslow-homing",
+                    "key": "homing",
+                    "disabled": false,
+                    "title": "Reset Chains",
+                    "description": "Inform the Maslow that the chains (not the sled) are in the exact same position as they were when you used \"Set Chains\".",
+                    "icon": "fa-link"
+                },
+                "mpos_set_home_x": false,
+                "mpos_set_home_y": false,
+                "mpos_go_home_x": false,
+                "mpos_go_home_y": false,
+                "mpos_go_home_z": false
+            },
+            "commands": {
+                "homing": [
+                    "G21",
+                    "G90",
+                    "G0 Z5",
+                    "G0 X0 Y0"
+                ]
+            },
+            "parts": [
+                {
+                    "id": "arduino-due",
+                    "sortOrder": 2,
+                    "partType": "BOARD",
+                    "title": "Arduino Due",
+                    "description": null,
+                    "dataBlob": "",
+                    "settings": []
+                },
+                {
+                    "id": "makermade-v2",
+                    "sortOrder": 3,
+                    "partType": "SHIELD",
+                    "title": "V2",
+                    "description": "V2 shield (three heatsinks, used by the M2).",
+                    "dataBlob": "",
+                    "settings": [
+                        {
+                            "id": "makermade-invert-z"
+                        },
+                        {
+                            "id": "makermade-z-axis-resolution"
+                        }
+                    ]
+                },
+                {
+                    "id": "maslow-round-18-sled",
+                    "sortOrder": 1,
+                    "partType": "SLED",
+                    "title": "Standard 18-inch Circle",
+                    "description": "An 18-inch diameter sled, with the tip of the cutter 9 inches from each edge (most common).",
+                    "dataBlob": "{\"top\":228.6,\"right\":228.6,\"bottom\":228.6,\"left\":228.6}",
+                    "settings": []
+                }
+            ]
+        }
+    ]
+}
