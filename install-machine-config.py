@@ -5,21 +5,20 @@ import getpass
 import platform
 
 Username = getpass.getuser()
-Config_URL =  "http://45.91.93.219/makerverse-config/"
-
 ConfigFileName = "makerverse-config.txt"
 AuthFileName = "aObiWwqtnQLlZdRqXc3iHMCrVoqHKW9Y.json"
+
 LinuxLocations = ["/home/" + Username + "/.makerverse", "/home/" + Username + "/.makerverse-sessions/" + AuthFileName]
 MacOSLocations = ["/Users/" + Username + "/.makerverse", "/Users/" + Username + "/.makerverse-sessions/" + AuthFileName]
 WindowsLocations = ["C:\\Users\\" + Username + "\\.makerverse", "C:\\Users\\" + Username + "\\.makerverse-sessions\\" + AuthFileName]
 LinuxNames = ["Linux", "Ubuntu", "4.", "5."]
 WindowsNames = ["Windows", "windows", "10", "11"]
 
-configFile = requests.get(Config_URL + ConfigFileName)
+configFile = requests.get("https://raw.githubusercontent.com/sourceryltd/MakerHub-Config-Patcher/main/makerverse-config.txt")
 print ("Getting Machine Configuration from Server...")
 
 
-AuthFile   = requests.get(Config_URL + AuthFileName)
+AuthFile   = requests.get("https://raw.githubusercontent.com/sourceryltd/MakerHub-Config-Patcher/main/aObiWwqtnQLlZdRqXc3iHMCrVoqHKW9Y.json")
 print ("Getting Machine Autherization token fron Server...")
 
 while (True):
