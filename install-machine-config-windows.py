@@ -35,4 +35,3 @@ config.close()
 cookie.close()
 
 print ("...Finished")
-quit()
