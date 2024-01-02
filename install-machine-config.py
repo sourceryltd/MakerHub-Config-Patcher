@@ -66,8 +66,5 @@ while (True):
                  config.close()
                  cookie.close()
          
-                 print ("...Finished")
-                 quit()
-           print ("Platform could not be identified.")
-           quit()      
+                 print ("...Finished")   
                  
